@@ -1,8 +1,5 @@
-import { stat } from "fs";
 import EventEmitter from "./EventEmitter.js"; 
 
-type Encoding = BufferEncoding | string | null;  
-type Chunk = string | Buffer ;
 type BufferedItem = {
     chunk: Chunk;
     encoding: Encoding;

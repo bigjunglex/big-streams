@@ -17,4 +17,11 @@ Become enemy to know enemy
 ```
 
 ### ***Some tests from Node.js repo + event emmiter***
+
+Secret scrolls : 
+
+📜 [Understanding stream module](https://github.com/Babak-Gholamzadeh/understanding-nodejs-stream-module)
+
+📜 [Secret Scroll](https://nodejs.org/docs/latest/api/)
+
 ### 𓃠𓅓𓆣
