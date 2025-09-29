@@ -141,7 +141,7 @@ class Writeable extends EventEmitter {
         return out
     }
     
-    _write(chunk: Chunk,  encoding: Encoding, cb: Function) {
+    private _write(chunk: Chunk,  encoding: Encoding, cb: Function) {
         throw new Error('_write must be implemented!');
     }
 
@@ -275,7 +275,7 @@ class Writeable extends EventEmitter {
         callback(err)
     }
 
-    _destroy(err?: Error, callback?: Function) {
+    private _destroy(err?: Error, callback?: Function) {
         if (err) {
             this.state.errored = err;
             this.onError();

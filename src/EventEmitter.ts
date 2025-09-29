@@ -1,4 +1,3 @@
-type Callback = (...args: any[]) => any;
 type EventStore = Map<string, Callback[]>;
 type WrapperState = {
     eventName: string;
@@ -37,7 +36,7 @@ export default class EventEmitter {
         return this;
     }
 
-    on(eventName:string, listener: Callback) {
+    on(eventName:string, listener: Callback): this | void {
         return this.addListener(eventName, listener);
     }
 
@@ -87,7 +86,7 @@ export default class EventEmitter {
 
     listenerCount(eventName: string) {
         const events = this.events;
-        if (events.has(eventName)) return events.get(eventName)?.length;
+        if (events.has(eventName)) return events.get(eventName)?.length || 0;
         return 0;
     }
 }
