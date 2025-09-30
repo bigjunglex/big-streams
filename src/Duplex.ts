@@ -4,7 +4,7 @@ import Writeable, { type WriteableOptions } from "./Writeable.js";
 export type DuplexOptions = ReadableOptions & WriteableOptions;
 
 interface Duplex {
-    [key:string]: Callback | {};  
+    [key:string]: Callback | {}  | number | null;
 }
 
 class Duplex extends Readable implements Duplex{

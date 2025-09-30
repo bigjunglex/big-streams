@@ -1,5 +1,5 @@
 import Duplex, { type DuplexOptions } from "../Duplex.js";
-import fs, { readFile } from 'fs'
+import fs from 'fs'
 
 class CreateDuplexStream extends Duplex {
     private readFilePath: fs.PathLike;
@@ -9,6 +9,7 @@ class CreateDuplexStream extends Duplex {
     
     constructor(readFilePath: fs.PathLike, writeFilePath: fs.PathLike, options?: DuplexOptions) {
         super(options);
+        
         this.readFilePath = readFilePath;
         this.writeFilePath = writeFilePath;
         this.readFileDescriptor = null;

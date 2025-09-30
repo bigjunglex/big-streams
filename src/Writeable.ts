@@ -141,7 +141,7 @@ class Writeable extends EventEmitter {
         return out
     }
     
-    private _write(chunk: Chunk,  encoding: Encoding, cb: Function) {
+    _write(chunk: Chunk,  encoding: Encoding, cb: Function) {
         throw new Error('_write must be implemented!');
     }
 
